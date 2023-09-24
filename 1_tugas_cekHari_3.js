@@ -30,4 +30,10 @@ try{
     console.log("Error bro : ", error)
 }
 
+// .then dan catch adalah metode yang digunakan dalam JavaScript untuk mengelola Promise. 
+// Promise adalah objek yang digunakan untuk menangani tugas-tugas asinkron 
+
+// try...catch adalah blok yang digunakan untuk menangani kesalahan (exceptions) dalam kode JavaScript secara lebih umum. 
+// Ini berguna untuk menangani kesalahan yang tidak terkait dengan Promise,
+// seperti kesalahan sintaksis atau kesalahan yang terjadi dalam fungsi yang Anda panggil.
 
