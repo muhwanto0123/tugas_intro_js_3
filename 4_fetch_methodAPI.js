@@ -1,24 +1,21 @@
-// URL REST API
-const apiUrl = 'https://jsonplaceholder.typicode.com/users';
-
-// Menggunakan fetch untuk mengambil data dari API
-fetch(apiUrl)
-  .then((response) => {
-    // Memeriksa apakah responsenya berhasil (kode status 200 OK)
-    if (!response.ok) {
-      throw new Error('Gagal mengambil data');
+const getData = async () =>  {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    
+    if(!response.ok){
+      throw new Error(`Http error Status: ${response.status}` )
     }
-    // Mengubah responsenya menjadi JSON
-    return response.json();
-  })
-  .then((data) => {
-    // Mendapatkan semua nama dari data
-    const names = data.map((user) => user.name);
-    // Menampilkan nama-nama ke console
-    names.forEach((name, index) => {
-      console.log(`${index + 1}. ${name}`);
+
+    const data = await response.json();
+    const nama = data.map((user) => user.name)
+    nama.forEach((user, index) => {
+      console.log(`${index + 1} - ${user.name}`)
     });
-  })
-  .catch((error) => {
-    console.error('Terjadi kesalahan:', error);
-  });
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// Menggunakan getData
+getData()

@@ -19,16 +19,16 @@ const cekHariKerja = (day) => {
     //     console.log(error)
     // })
 }
-try{
-    cekHariKerja("senin")
-        .then((pesan) => {
-            console.log(`hari ${pesan} saatnya kerja`)
-        }).catch((error) => {
-            console.log(error.message)
-        })
-} catch (error){
-    console.log("Error bro : ", error)
-}
+// try{
+cekHariKerja("senin")
+    .then((pesan) => {
+        console.log(`hari ${pesan} saatnya kerja`)
+    }).catch((error) => {
+        console.log(error.message)
+    })
+// } catch (error){
+//     console.log("Error bro : ", error)
+// }
 
 // .then dan catch adalah metode yang digunakan dalam JavaScript untuk mengelola Promise. 
 // Promise adalah objek yang digunakan untuk menangani tugas-tugas asinkron 

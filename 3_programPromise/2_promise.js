@@ -1,5 +1,5 @@
 // Fungsi untuk menentukan apakah buah tersebut busuk atau tidak
-function classifyFruit(fruit, rotten) {
+const classifyFruit = (fruit, rotten) => {
     return new Promise((resolve, reject) => {
       // Simulasi penentuan apakah buah tersebut busuk atau tidak
       setTimeout(() => {
