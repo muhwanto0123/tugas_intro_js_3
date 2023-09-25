@@ -15,7 +15,7 @@ const getMonth = (callback) => {
     }, 4000)
 }
 const show_month = (error, showMonth) => {
-    const show = showMonth.map(a => a)
+    const show = showMonth.map((a) => a)
     if(error){
         console.log(`Mohon maaf telah terjadi Error : (${error})`)
     }else{
